@@ -1,0 +1,15 @@
+C:\Users\oscar\Documents\C#\ReviewOrders\ReviewOrders\bin\Debug\net8.0\ReviewOrders.exe
+C:\Users\oscar\Documents\C#\ReviewOrders\ReviewOrders\bin\Debug\net8.0\ReviewOrders.deps.json
+C:\Users\oscar\Documents\C#\ReviewOrders\ReviewOrders\bin\Debug\net8.0\ReviewOrders.runtimeconfig.json
+C:\Users\oscar\Documents\C#\ReviewOrders\ReviewOrders\bin\Debug\net8.0\ReviewOrders.dll
+C:\Users\oscar\Documents\C#\ReviewOrders\ReviewOrders\bin\Debug\net8.0\ReviewOrders.pdb
+C:\Users\oscar\Documents\C#\ReviewOrders\ReviewOrders\obj\Debug\net8.0\ReviewOrders.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\oscar\Documents\C#\ReviewOrders\ReviewOrders\obj\Debug\net8.0\ReviewOrders.AssemblyInfoInputs.cache
+C:\Users\oscar\Documents\C#\ReviewOrders\ReviewOrders\obj\Debug\net8.0\ReviewOrders.AssemblyInfo.cs
+C:\Users\oscar\Documents\C#\ReviewOrders\ReviewOrders\obj\Debug\net8.0\ReviewOrders.csproj.CoreCompileInputs.cache
+C:\Users\oscar\Documents\C#\ReviewOrders\ReviewOrders\obj\Debug\net8.0\ReviewOrders.sourcelink.json
+C:\Users\oscar\Documents\C#\ReviewOrders\ReviewOrders\obj\Debug\net8.0\ReviewOrders.dll
+C:\Users\oscar\Documents\C#\ReviewOrders\ReviewOrders\obj\Debug\net8.0\refint\ReviewOrders.dll
+C:\Users\oscar\Documents\C#\ReviewOrders\ReviewOrders\obj\Debug\net8.0\ReviewOrders.pdb
+C:\Users\oscar\Documents\C#\ReviewOrders\ReviewOrders\obj\Debug\net8.0\ReviewOrders.genruntimeconfig.cache
+C:\Users\oscar\Documents\C#\ReviewOrders\ReviewOrders\obj\Debug\net8.0\ref\ReviewOrders.dll
