@@ -1,93 +1,93 @@
 # InventoryManager
 
-Este es un programa de consola simple para la gestión de inventario. Permite a los usuarios ver el inventario, agregar nuevos productos, modificar productos existentes, eliminar productos y salir del programa.
+his is a simple console program for inventory management. It allows users to view the inventory, add new products, modify existing products, delete products, and exit the program.
 
-## Características
+## Features
 
-- Ver el inventario de productos.
-- Añadir un nuevo producto.
-- Modificar un producto existente.
-- Eliminar un producto.
-- Salir del programa.
+- View the product inventory.
+- Add a new product.
+- Modify an existing product.
+- Delete a product.
+- Exit the program.
 
-## Requisitos
+## Requirements
 
 - .NET SDK
 
-## Cómo usar
+## How to Use
 
-1. Clona el repositorio o descarga los archivos.
+1. Clone the repository or download the files.
 
-2. Navega al directorio del proyecto y ejecuta el siguiente comando para compilar el programa:
+2. Navigate to the project directory and run the following command to compile the program:
 
     ```bash
     dotnet build
     ```
 
-3. Ejecuta el programa con el siguiente comando:
+3. Run the program with the following command:
 
     ```bash
     dotnet run
     ```
 
-## Menú de opciones
+## Menu Options
 
-1. **Ver inventario**: Muestra una lista de todos los productos en el inventario.
-2. **Añadir un nuevo producto**: Permite agregar un nuevo producto al inventario ingresando su nombre, cantidad y precio.
-3. **Modificar un producto existente**: Permite modificar el nombre, cantidad y precio de un producto existente seleccionando su ID.
-4. **Eliminar un producto**: Permite eliminar un producto del inventario seleccionando su ID.
-5. **Salir**: Sale del programa.
+1. **View Inventory**: Displays a list of all products in the inventory.
+2. **Add a New Product**: Allows you to add a new product to the inventory by entering its name, quantity, and price.
+3. **Modify an Existing Product**: Allows you to modify the name, quantity, and price of an existing product by selecting its ID.
+4. **Delete a Product:**: Allows you to delete a product from the inventory by selecting its ID.
+5. **Exit**: Exits the program.
 
-## Ejemplo de uso
-
-```text
-1 - Ver inventario
-2 - Añadir un nuevo producto
-3 - Modificar un producto existente
-4 - Eliminar un producto
-5 - Salir
-```
-
-### Ver inventario
+## Example Usage
 
 ```text
-No hay productos en la lista
+1 - View Inventory
+2 - Add a New Product
+3 - Modify an Existing Product
+4 - Delete a Product
+5 - Exit
 ```
 
-### Añadir un nuevo producto
+### View Inventory
 
 ```text
-Ingrese un producto: Manzanas
-Ingrese una cantidad del producto: 10
-Ingrese el precio del producto: 0.5
+No products in the list
 ```
 
-### Modificar un producto existente
+### Add a New Product
 
 ```text
-Seleccione el ID del producto que desea modificar: 123
-¿Qué deseas modificar?
-1 - Nombre
-2 - Cantidad
-3 - Precio
-4 - Todo
-5 - Salir
-Ingrese el nuevo nombre del producto: Peras
+Enter a product: Apples
+Enter the product quantity: 10
+Enter the product price: 0.5
 ```
 
-### Eliminar un producto
+### Modify an Existing Product
 
 ```text
-Seleccione el Id del producto: 123
-Producto eliminado correctamente.
+Select the product ID you want to modify: 123
+What do you want to modify?
+1 - Name
+2 - Quantity
+3 - Price
+4 - All
+5 - Exit
+Enter the new product name: Pears
 ```
 
-### Salir
+### Delete a Product
 
 ```text
-Hasta pronto
+Select the product ID: 123
+Product deleted successfully.
 ```
 
-## Contribuir
+### Exit
 
-¡Las contribuciones son bienvenidas! Por favor, abre un issue o un pull request para cualquier mejora o corrección.
+```text
+See you soon
+```
+
+## Contribute
+
+Contributions are welcome! Please open an issue or a pull request for any improvements or corrections.
