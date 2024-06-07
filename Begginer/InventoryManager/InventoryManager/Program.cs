@@ -5,191 +5,196 @@ namespace InventoryManager
     class Program
     {
         static void Main(string[] args)
-        {   
+        {
             Random rand = new Random();
-            string? nombreProducto = null;
-            int eleccionMenu = 0;
-            int cantidad = 0;
-            int idProducto = 0;
-            int indiceProductoModificar = -1; 
-            double precio = 0;
-            bool salirPrograma = false;
-            List<string> listaProductos = new List<string>();
-            while (!salirPrograma) {
-                Console.WriteLine("1 - Ver inventario\n2 - Añadir un nuevo producto\n3 - Modificar un producto existente\n4 - Eliminar un producto\n5 - Salir ");
-                if(!int.TryParse(Console.ReadLine() , out eleccionMenu) || eleccionMenu < 1 || eleccionMenu > 5)
+            string? productName = null;
+            int menuChoice = 0;
+            int quantity = 0;
+            int productId = 0;
+            int indexToModify = -1;
+            double price = 0;
+            bool exitProgram = false;
+            List<string> productList = new List<string>();
+            while (!exitProgram)
+            {
+                Console.WriteLine("1 - View Inventory\n2 - Add a New Product\n3 - Modify an Existing Product\n4 - Remove a Product\n5 - Exit");
+                if (!int.TryParse(Console.ReadLine(), out menuChoice) || menuChoice < 1 || menuChoice > 5)
                 {
-                    Console.WriteLine("No ha seleccionado una opcion valida");
+                    Console.WriteLine("You have not selected a valid option");
                     continue;
                 }
 
-                switch (eleccionMenu)
+                switch (menuChoice)
                 {
                     case 1:
-                        string[] arrayProductos = listaProductos.ToArray();
-                        if(arrayProductos.Length == 0 )
+                        string[] productArray = productList.ToArray();
+                        if (productArray.Length == 0)
                         {
-                            Console.WriteLine("No hay productos en la lista");
+                            Console.WriteLine("There are no products in the list");
                             break;
                         }
 
-                        for (int i = 0; i < arrayProductos.Length; i+= 4)
+                        for (int i = 0; i < productArray.Length; i += 4)
                         {
-                            Console.WriteLine($"Id: {arrayProductos[i]} - Producto: {arrayProductos[i+1]} - Cantidad: {arrayProductos[i+2]} - Precio: {arrayProductos[i+3]}");
+                            Console.WriteLine($"Id: {productArray[i]} - Product: {productArray[i + 1]} - Quantity: {productArray[i + 2]} - Price: {productArray[i + 3]}");
                         }
                         break;
                     case 2:
 
-                        Console.Write("Ingrese un producto : ");
-                        nombreProducto = Console.ReadLine().Trim();
-                        
-                        if(nombreProducto.Length == 0)
-                        {
-                            Console.WriteLine("No ha escrito ningun producto.");
-                            break ;
-                        }
+                        Console.Write("Enter a product: ");
+                        productName = Console.ReadLine().Trim();
 
-                        Console.Write("Ingrese una cantidad del producto: ");
-                        if(!int.TryParse(Console.ReadLine(), out cantidad) || cantidad < 1){
-                            Console.WriteLine("No ha escogido una cantidad valida");
+                        if (productName.Length == 0)
+                        {
+                            Console.WriteLine("You have not entered any product.");
                             break;
                         }
-                        Console.Write("Ingrese el precio del producto: ");
-                        if (!double.TryParse(Console.ReadLine(), out precio) || precio < 0)
+
+                        Console.Write("Enter a product quantity: ");
+                        if (!int.TryParse(Console.ReadLine(), out quantity) || quantity < 1)
                         {
-                            Console.WriteLine("No ha escogido un  producto valido");
+                            Console.WriteLine("You have not selected a valid quantity");
+                            break;
+                        }
+                        Console.Write("Enter the product price: ");
+                        if (!double.TryParse(Console.ReadLine(), out price) || price < 0)
+                        {
+                            Console.WriteLine("You have not selected a valid product price");
+                            break;
                         }
 
-                        listaProductos.Add(rand.Next(1, 1000000001).ToString());
-                        listaProductos.Add(nombreProducto);
-                        listaProductos.Add(cantidad.ToString());
-                        listaProductos.Add(precio.ToString());
+                        productList.Add(rand.Next(1, 1000000001).ToString());
+                        productList.Add(productName);
+                        productList.Add(quantity.ToString());
+                        productList.Add(price.ToString());
 
                         break;
                     case 3:
-                        
-                        int eleccionModificar = 0;
-                        
-                        Console.WriteLine("Seleccione el ID del producto que desea modificar");
-                        if(!int.TryParse(Console.ReadLine(), out idProducto) || idProducto < 0 || !listaProductos.Contains(idProducto.ToString()) )
+
+                        int modifyChoice = 0;
+
+                        Console.WriteLine("Select the ID of the product you want to modify");
+                        if (!int.TryParse(Console.ReadLine(), out productId) || productId < 0 || !productList.Contains(productId.ToString()))
                         {
-                            Console.WriteLine("No seleccionaste un id valido");
+                            Console.WriteLine("You have not selected a valid ID");
                             break;
                         }
 
-                        for (int i = 0; i < listaProductos.Count ; i+= 4)
+                        for (int i = 0; i < productList.Count; i += 4)
                         {
-                            if (listaProductos[i] == idProducto.ToString()){
-                                indiceProductoModificar = i;
+                            if (productList[i] == productId.ToString())
+                            {
+                                indexToModify = i;
                                 break;
                             }
                         }
 
-                        if(indiceProductoModificar == -1)
+                        if (indexToModify == -1)
                         {
-                            Console.WriteLine("No se encontró un producto con el ID especificado.");
+                            Console.WriteLine("No product found with the specified ID.");
                             break;
                         }
 
-                        // El producto fue encontrado, ahora puedes modificarlo
-                        Console.WriteLine("¿Qué deseas modificar?");
-                        Console.WriteLine("1 - Nombre");
-                        Console.WriteLine("2 - Cantidad");
-                        Console.WriteLine("3 - Precio");
-                        Console.WriteLine("4 - Todo");
-                        Console.WriteLine("5 - Salir");
+                        // The product was found, now you can modify it
+                        Console.WriteLine("What would you like to modify?");
+                        Console.WriteLine("1 - Name");
+                        Console.WriteLine("2 - Quantity");
+                        Console.WriteLine("3 - Price");
+                        Console.WriteLine("4 - All");
+                        Console.WriteLine("5 - Exit");
 
-                        if (!int.TryParse(Console.ReadLine(), out eleccionModificar) || eleccionModificar < 1 || eleccionModificar > 5)
+                        if (!int.TryParse(Console.ReadLine(), out modifyChoice) || modifyChoice < 1 || modifyChoice > 5)
                         {
-                            Console.WriteLine("No ha seleccionado una opción válida");
+                            Console.WriteLine("You have not selected a valid option");
                             break;
                         }
 
-                        switch (eleccionModificar)
+                        switch (modifyChoice)
                         {
                             case 1:
-                                Console.Write("Ingrese el nuevo nombre del producto: ");
-                                listaProductos[indiceProductoModificar + 1] = Console.ReadLine().Trim();
+                                Console.Write("Enter the new product name: ");
+                                productList[indexToModify + 1] = Console.ReadLine().Trim();
                                 break;
                             case 2:
-                                Console.WriteLine("Ingrese la nueva cantidad del producto: ");
-                                if(!int.TryParse(Console.ReadLine(), out int nuevaCantidad) || nuevaCantidad < 0)
+                                Console.WriteLine("Enter the new product quantity: ");
+                                if (!int.TryParse(Console.ReadLine(), out int newQuantity) || newQuantity < 0)
                                 {
-                                    Console.WriteLine("No ha ingresado una cantidad válida.");
+                                    Console.WriteLine("You have not entered a valid quantity.");
                                     break;
                                 }
-                                listaProductos[indiceProductoModificar + 2] = nuevaCantidad.ToString();
+                                productList[indexToModify + 2] = newQuantity.ToString();
                                 break;
                             case 3:
-                                Console.Write("Ingrese el nuevo precio del producto: ");
-                                if(!double.TryParse(Console.ReadLine(), out double nuevoPrecio) || nuevoPrecio < 0)
+                                Console.Write("Enter the new product price: ");
+                                if (!double.TryParse(Console.ReadLine(), out double newPrice) || newPrice < 0)
                                 {
-                                    Console.WriteLine("No ha ingresado un precio válido.");
+                                    Console.WriteLine("You have not entered a valid price.");
                                     break;
                                 }
-                                listaProductos[indiceProductoModificar + 3] = nuevoPrecio.ToString();
+                                productList[indexToModify + 3] = newPrice.ToString();
                                 break;
                             case 4:
-                                Console.Write("Ingrese el nuevo nombre del producto: ");
-                                listaProductos[indiceProductoModificar + 1] = Console.ReadLine().Trim();
+                                Console.Write("Enter the new product name: ");
+                                productList[indexToModify + 1] = Console.ReadLine().Trim();
 
-                                Console.Write("Ingrese la nueva cantidad del producto: ");
-                                if (!int.TryParse(Console.ReadLine(), out nuevaCantidad) || nuevaCantidad < 0)
+                                Console.Write("Enter the new product quantity: ");
+                                if (!int.TryParse(Console.ReadLine(), out newQuantity) || newQuantity < 0)
                                 {
-                                    Console.WriteLine("No ha ingresado una cantidad válida.");
+                                    Console.WriteLine("You have not entered a valid quantity.");
                                     break;
                                 }
-                                listaProductos[indiceProductoModificar + 2] = nuevaCantidad.ToString();
+                                productList[indexToModify + 2] = newQuantity.ToString();
 
-                                Console.Write("Ingrese el nuevo precio del producto: ");
-                                if (!double.TryParse(Console.ReadLine(), out nuevoPrecio) || nuevoPrecio < 0)
+                                Console.Write("Enter the new product price: ");
+                                if (!double.TryParse(Console.ReadLine(), out newPrice) || newPrice < 0)
                                 {
-                                    Console.WriteLine("No ha ingresado un precio válido.");
+                                    Console.WriteLine("You have not entered a valid price.");
                                     break;
                                 }
-                                listaProductos[indiceProductoModificar + 3] = nuevoPrecio.ToString();
+                                productList[indexToModify + 3] = newPrice.ToString();
                                 break;
                             case 5:
                                 break;
-                        }       
+                        }
 
                         break;
                     case 4:
 
-                        Console.WriteLine("Seleccione el Id del producto");
-                        if(!int.TryParse(Console.ReadLine(), out idProducto) || idProducto < 0 || !listaProductos.Contains(idProducto.ToString()))
+                        Console.WriteLine("Select the product ID");
+                        if (!int.TryParse(Console.ReadLine(), out productId) || productId < 0 || !productList.Contains(productId.ToString()))
                         {
-                            Console.WriteLine("No seleccionaste un id valido");
+                            Console.WriteLine("You have not selected a valid ID");
                             break;
                         }
 
-                        for (int i = 0; i < listaProductos.Count; i+= 4)
+                        for (int i = 0; i < productList.Count; i += 4)
                         {
-                            if (listaProductos[i] == idProducto.ToString())
-                                indiceProductoModificar = i;
+                            if (productList[i] == productId.ToString())
+                            {
+                                indexToModify = i;
                                 break;
+                            }
                         }
 
-                        // Verificar si se encontró el producto
-                        if (indiceProductoModificar == -1)
+                        // Verify if the product was found
+                        if (indexToModify == -1)
                         {
-                            Console.WriteLine("No se encontró un producto con el ID especificado.");
+                            Console.WriteLine("No product found with the specified ID.");
                             break;
                         }
 
-                        listaProductos.RemoveAt(indiceProductoModificar);
-                        listaProductos.RemoveAt(indiceProductoModificar);
-                        listaProductos.RemoveAt(indiceProductoModificar);
-                        listaProductos.RemoveAt(indiceProductoModificar);
-                        Console.WriteLine("Producto eliminado correctamente.");
+                        productList.RemoveAt(indexToModify);
+                        productList.RemoveAt(indexToModify);
+                        productList.RemoveAt(indexToModify);
+                        productList.RemoveAt(indexToModify);
+                        Console.WriteLine("Product successfully removed.");
                         break;
                     case 5:
-                        Console.WriteLine("Hasta pronto");
-                        salirPrograma = true;
-                        break ;
+                        Console.WriteLine("Goodbye");
+                        exitProgram = true;
+                        break;
                 }
             }
-            
         }
     }
 }
