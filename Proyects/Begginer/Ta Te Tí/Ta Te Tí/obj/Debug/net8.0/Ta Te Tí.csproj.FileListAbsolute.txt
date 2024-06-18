@@ -1,0 +1,15 @@
+C:\Users\oscar\Documents\C#\Proyects\Begginer\Ta Te Tí\Ta Te Tí\bin\Debug\net8.0\Ta Te Tí.exe
+C:\Users\oscar\Documents\C#\Proyects\Begginer\Ta Te Tí\Ta Te Tí\bin\Debug\net8.0\Ta Te Tí.deps.json
+C:\Users\oscar\Documents\C#\Proyects\Begginer\Ta Te Tí\Ta Te Tí\bin\Debug\net8.0\Ta Te Tí.runtimeconfig.json
+C:\Users\oscar\Documents\C#\Proyects\Begginer\Ta Te Tí\Ta Te Tí\bin\Debug\net8.0\Ta Te Tí.dll
+C:\Users\oscar\Documents\C#\Proyects\Begginer\Ta Te Tí\Ta Te Tí\bin\Debug\net8.0\Ta Te Tí.pdb
+C:\Users\oscar\Documents\C#\Proyects\Begginer\Ta Te Tí\Ta Te Tí\obj\Debug\net8.0\Ta Te Tí.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\oscar\Documents\C#\Proyects\Begginer\Ta Te Tí\Ta Te Tí\obj\Debug\net8.0\Ta Te Tí.AssemblyInfoInputs.cache
+C:\Users\oscar\Documents\C#\Proyects\Begginer\Ta Te Tí\Ta Te Tí\obj\Debug\net8.0\Ta Te Tí.AssemblyInfo.cs
+C:\Users\oscar\Documents\C#\Proyects\Begginer\Ta Te Tí\Ta Te Tí\obj\Debug\net8.0\Ta Te Tí.csproj.CoreCompileInputs.cache
+C:\Users\oscar\Documents\C#\Proyects\Begginer\Ta Te Tí\Ta Te Tí\obj\Debug\net8.0\Ta Te Tí.sourcelink.json
+C:\Users\oscar\Documents\C#\Proyects\Begginer\Ta Te Tí\Ta Te Tí\obj\Debug\net8.0\Ta Te Tí.dll
+C:\Users\oscar\Documents\C#\Proyects\Begginer\Ta Te Tí\Ta Te Tí\obj\Debug\net8.0\refint\Ta Te Tí.dll
+C:\Users\oscar\Documents\C#\Proyects\Begginer\Ta Te Tí\Ta Te Tí\obj\Debug\net8.0\Ta Te Tí.pdb
+C:\Users\oscar\Documents\C#\Proyects\Begginer\Ta Te Tí\Ta Te Tí\obj\Debug\net8.0\Ta Te Tí.genruntimeconfig.cache
+C:\Users\oscar\Documents\C#\Proyects\Begginer\Ta Te Tí\Ta Te Tí\obj\Debug\net8.0\ref\Ta Te Tí.dll
